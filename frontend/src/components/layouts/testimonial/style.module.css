@@ -1,0 +1,22 @@
+/* Testimonial Section */
+.carousel-card {
+  display: flex;
+  padding: 48;
+  margin: 0 16px;
+  max-width: 600px;
+  border-radius: 8px;
+  background-color: #F1F3FF;
+}
+.img-carousel{
+  padding-top: 40px;
+  text-align: center;
+}
+.carousel-button{
+  display: flex;
+}
+.carousel-button-content{
+  margin: 0 10px;
+}
+.carousel-button-prev{
+  padding-right: 0px;
+}

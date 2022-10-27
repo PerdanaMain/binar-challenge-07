@@ -1,0 +1,27 @@
+/* Service Section */
+.img-model{
+    
+  margin-top: 50px;
+  width: 80%;
+}
+.service-tagline{
+  padding-top: 50px;
+}
+.service-tagline-p{
+  padding-top: 50px;
+}
+.service-tagline-h1{
+  font-weight: 700;
+}
+.service-tagline-ul{
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.service-tagline-ul-li{
+  align-items: center;
+  margin-left: 0;
+}
+.service-tagline-ul-li-span{
+  padding-left: 10px;
+}
