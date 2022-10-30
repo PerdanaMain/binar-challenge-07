@@ -1,5 +1,6 @@
 import React from 'react'
 import Style from './style.module.css'
+// import {Button} from 'react-bootstrap'
 
 
 const hero = () => {
@@ -13,7 +14,7 @@ const hero = () => {
             Sewa & Rental Mobil Terbaik di kawasan Sidoarjo
             </h1>
             <p>Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
-            <button className={Style["btn-sewa"]}>Mulai Sewa Mobil</button>
+            <a href="/getcars" role={"button"} className={Style.btnsewa}>Mulai Sewa Mobil</a>
           </div>
         </div>
         <div className="col">

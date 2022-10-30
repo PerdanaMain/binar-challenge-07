@@ -7,7 +7,7 @@ function ColorSchemesExample() {
     <>
       <Navbar  style={{ backgroundColor:"#F1F3FF" }}>
         <Container>
-          <Navbar.Brand href="#hero">
+          <Navbar.Brand href="/">
             <img src="./assets/images/img_logo.png" alt="Logo" />
           </Navbar.Brand>
           <Nav className="ms-auto">

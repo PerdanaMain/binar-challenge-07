@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/OwlCarousel/docs/assets/owlcarousel/assets/owl.carousel.min.css";
+import "./assets/OwlCarousel/docs/assets/owlcarousel/assets/owl.theme.default.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
