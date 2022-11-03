@@ -20,3 +20,7 @@
 .carousel-button-prev{
   padding-right: 0px;
 }
+
+.item{
+  border: 2px solid;
+}

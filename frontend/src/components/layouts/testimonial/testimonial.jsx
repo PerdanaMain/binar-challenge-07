@@ -1,5 +1,8 @@
 import React from 'react'
 import './style.module.css';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const testimonial = () => {
   return (
@@ -9,23 +12,18 @@ const testimonial = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod</p>
       </div>
-      <div className="owl-carousel owl-theme">
-        <div className="item">
-          <div className="row">
-            <div className="col-3 align-self-center">
-              <img src="./assets/images/img_photo1.png" alt="" />
-            </div>
-            <div className="col-9 review">
-              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              lorem ipsum
-              dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod”</p>
-              <p className="author">John Dee 32, Bromo</p>
-            </div>
-          </div>
+      <OwlCarousel className='owl-theme' loop margin={1} nav>
+        <div className='item ms-3' style={{ border: "1px solid", padding:"80px" }}>
+            <h4>1</h4>
         </div>
-      </div>
+        <div className='item ms-3' style={{ border: "1px solid", padding:"80px" }}>
+            <h4>1</h4>
+        </div>
+        <div className='item ms-3' style={{ border: "1px solid", padding:"80px" }}>
+            <h4>1</h4>
+        </div>
+        
+    </OwlCarousel>;
     </section>
   )
 }

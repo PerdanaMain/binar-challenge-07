@@ -1,5 +1,5 @@
 /* Search Panel */
-.searchpanel{
+#searchpanel{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   margin-top: -50px !important;
@@ -9,7 +9,7 @@
 }
 
 .searchpanelbutton{
-  margin-top: 25px;
+  margin-top: 33px;
   background: #5CB85F;
   font-weight: 500;
   line-height: 20px;
