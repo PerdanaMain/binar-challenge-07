@@ -15,7 +15,8 @@ export const getCars = async () => {
 
 export const filterCar = async (req, res) => {
   const result = [];
-  const { driver, date, time, capacity } = req.query;
+  const empty = "Data tidak ditemukan";
+  const { driver, date, capacity } = req.query;
 
   console.log(req.query);
 
@@ -48,6 +49,10 @@ export const filterCar = async (req, res) => {
         result.push(data[i]);
       }
     }
+  }
+
+  if (result.length == 0) {
+    result.push(empty);
   }
 
   return res.status(200).json(result);

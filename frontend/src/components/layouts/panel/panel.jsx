@@ -1,6 +1,8 @@
 import {React, useState, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {getCars} from '../../../redux/actions/carAction';
 import style from './style.module.css';
-import axios from 'axios';
+// import axios from 'axios';
 
 const Panel = () => {
   const [driver, setDriver] = useState("");
@@ -8,20 +10,29 @@ const Panel = () => {
   const [time, setTime] = useState("");
   const [capacity, setCapacity] = useState("");
   const [result, setResult] = useState([]);
+
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(getCars(driver, date, time, capacity))
+  },[driver, date, time, capacity])
+
+  const { getCarsListResult, getCarsListLoading } = useSelector((state) => state.carsReducer);
   const submitHandler = async (e) =>{
     e.preventDefault();
-    
-    try {
-      const response = await axios.get(`http://localhost:3001/filtercar?driver=${driver}&date=${date}&time=${time}&capacity=${capacity}`)
+    setResult(getCarsListResult);
+    // try {
+    //   const response = await axios.get(`http://localhost:3001/filtercar?driver=${driver}&date=${date}&time=${time}&capacity=${capacity}`)
 
-      const data = response.data
-      console.log(data);
-      setResult(data)
-    } catch (error) {
-      console.log(error.message)
-    }
+    //   const data = response.data
+    //   console.log(data);
+    //   setResult(data)
+      
+    // } catch (error) {
+    //   console.log(error.message)
+    // }
   
   }
+  console.log(result)
   return (
     <div className="container">
       <div className="row">
@@ -77,14 +88,14 @@ const Panel = () => {
       </div>
       <div className="row mb-5" style={{ marginTop:"-70px", marginLeft:"30px" }}>
           {
-            result.msg ? (
+            result[0] == "Data tidak ditemukan"  ? (
               <div>
-                <p>{result.msg}</p>
+                <h3 className='text-center fw-bold' style={{ color: "red", fontSize: "20h3x" }} >{result[0]}</h3>
               </div>
             ): ""
           }
           {
-           result.length >= 1 ? 
+           result.length >= 1 && result[0] != "Data tidak ditemukan" ? 
             
             result.map((car)=>(
               <div className="col-lg-4 mt-3 mb-2">
